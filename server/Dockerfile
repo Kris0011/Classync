@@ -19,14 +19,8 @@ WORKDIR /app
 # Copy the JAR from the build stage
 COPY --from=build /app/target/*.jar app.jar
 
-# Copy env.properties file (optional, or mount it later via volume)
-COPY env.properties ./env.properties
-
 # Expose the port configured in application.properties
 EXPOSE 8080
-
-# Set the environment variable for Spring config import
-ENV SPRING_CONFIG_IMPORT=env.properties
 
 # Run the application
 ENTRYPOINT ["java", "-jar", "app.jar"]
