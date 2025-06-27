@@ -20,7 +20,7 @@ WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
 
 # Copy env.properties file (optional, or mount it later via volume)
-COPY env.prop ./env.properties
+COPY env.properties ./env.properties
 
 # Expose the port configured in application.properties
 EXPOSE 8080
