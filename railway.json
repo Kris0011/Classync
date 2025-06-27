@@ -1,7 +1,0 @@
-{
-    "build": {
-        "builder": "nixpacks",
-        "buildCommand": "cd server && ./mvnw package",
-        "startCommand": "cd server && java -jar target/server-0.0.1-SNAPSHOT.jar"
-    }
-}
